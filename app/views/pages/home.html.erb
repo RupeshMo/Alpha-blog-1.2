@@ -1,3 +1,13 @@
 <h1>This is home page.....</h1>
 <br>
 Welcome to articles writing page
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="/articles/<%= article.id %>">
+        <%= article.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>

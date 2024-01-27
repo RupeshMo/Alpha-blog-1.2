@@ -1,1 +1,11 @@
-This contains list of articles
+<p>This contains list of articles.</p>
+
+<!-- This will use erb -->
+<% @articles.each do |t| %>
+
+<ul>
+ <li>Article title: <%=t.title%></li>
+ <li>Article body:  <%=t.body%>
+</ul>
+
+<%end%>
