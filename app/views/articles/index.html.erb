@@ -2,10 +2,12 @@
 
 <!-- This will use erb -->
 <% @articles.each do |t| %>
-
+<div>
 <ul>
  <li>Article title: <%=t.title%></li>
  <li>Article body:  <%=t.body%>
 </ul>
-
+</div>
 <%end%>
+
+<%= link_to "New Article", new_article_path%> |

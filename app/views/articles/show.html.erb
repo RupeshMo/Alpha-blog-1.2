@@ -1,3 +1,13 @@
 <h1>Below is your article: </h1>
 <p><u><%= @article.title%></u></p>
 <p><i><%= @article.body%></i></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+
