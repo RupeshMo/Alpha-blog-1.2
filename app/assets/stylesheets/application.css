@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+ div {
+  margin: 40px;
+  font-size: 100px;
+  }
+
+#to_articles {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 60px;
+}
+
+table.articles{
+  /* background-color: antiquewhite; */
+  width: 100%;
+  border: 2px solid rgb(246, 120, 9);
+  /* text-align: center; */
+}
+
+tr {
+  margin: 2px;
+}
+.ar {
+  border: 1px solid blue;
+  font-size: 12px;
+  width: 60%;
+  height: auto;
+  align-items: center;
+
+}
+#actions {
+  column-span: all;
+}
+

@@ -1,8 +1,29 @@
 <h1>This is home page.....</h1>
 <br>
 Welcome to articles writing page
+<div class='ar'>
+<table class='articles' >
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Action</th>
+  </tr>
 
-<ul>
+  <tr>
+    <% @articles.each do |article|%>
+    <td><%=article.title%></td>
+    <td><%=article.body%></td>
+    <td  id="actions"><%= link_to "Edit", edit_article_path(article)%></td>
+    <td  id="actions"><%= link_to "View", article_path(article)%></td>
+    <td id="actions"><%= link_to "Destroy", article_path(article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></td>
+  </tr>
+    <%end%>
+</table>
+</div>
+<!--<ul>
   <% @articles.each do |article| %>
     <li>
       <a href="<%article_path(article) %>">
@@ -10,4 +31,4 @@ Welcome to articles writing page
       </a>
     </li>
   <% end %>
-</ul>
+</ul>-->
